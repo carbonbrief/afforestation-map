@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Map of afforestation | Carbon Brief</title>
+        <meta name="description" content="A map of global afforestation since 1990.">
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <meta name="author" content="Rosamund Pearce and Tom Prater">
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="map">
+                <div id="adb"><i class="fa fa-info-circle" aria-hidden="true"></i><p>Map tiles failed to load. This might be because:<ul><li>Your adblocker is preventing the map tiles from rendering. Please try whitelisting this site and refreshing the page.</li><li>Your browser does not support WebGL. Please upgrade or reopen this link in a modern web browser, such as Firefox (version 4.0+), Chrome (version 9.0+) or Safari (version 6.0+).</li></ul></p></div>
+        </div>
+        <div id="console">
+            <div class='session' id='sliderbar'>
+                <h2>Year: <label id='active-year'>2015</label></h2>
+                <input id='slider' autocomplete="off" class='row' type='range' min='2011' max='2015' step='1' value='2015' />
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
