@@ -79,12 +79,24 @@ map.on('load', function() {
         // update text in the UI
         document.getElementById('active-year').innerText = year;
 
-        // update filter
-        // var filterYear = ['==', ['number', ['get', 'sliderYear']], year];
+        // update filters
+        var filterHasData = ['>=', ['number', ['get', year]], 0];
+
+        var filterBelowZero = ['<', ['number', ['get', year]], 0];
 
         map.setFilter('withData', ['all', filterHasData]);
 
         map.setFilter('withoutData', ['all', filterBelowZero]);
+
+        map.setPaintProperty('withData', 'fill-color', {
+            property: year,
+            type: 'exponential',
+            stops: [
+                [50, '#ffffcc'],
+                [5000, '#78c679'],
+                [50000, '#006837']
+            ]
+        });
 
     });
 
