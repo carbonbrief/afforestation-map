@@ -3,7 +3,7 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://openmaptiles.github.io/positron-gl-style/style-cdn.json',
     center: [8, 20],
-    zoom: 1.5
+    zoom: 1.8
 });
 
 // Add zoom and rotation controls to the map.
@@ -112,9 +112,11 @@ map.on('load', function() {
         map.getCanvas().style.cursor = 'pointer';
 
         var name = e.features[0].properties.ADMIN;
+        var forest = e.features[0].properties[year]
 
         popup.setLngLat(e.lngLat)
-            .setHTML(name)
+            .setHTML('<h3 style = "color: #7bb888;">' + name 
+            + '</h3><p><span class="label-title">Planted forest (1000 ha): </span>' + forest)
             .addTo(map);
 
     });
@@ -132,9 +134,11 @@ map.on('load', function() {
         map.getCanvas().style.cursor = 'pointer';
 
         var name = e.features[0].properties.ADMIN;
+        /*var currentYear = e.features[0].properties.year;*/
 
         popup.setLngLat(e.lngLat)
-            .setHTML(name)
+            .setHTML('<h3 style = "color: #7bb888;">' + name 
+            + '</h3><p><span class="label-title">Data unavailable for current year</span>')
             .addTo(map);
 
     });
