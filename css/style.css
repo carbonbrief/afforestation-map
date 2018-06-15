@@ -66,6 +66,13 @@ h1 {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
+    width:66%;
+}
+
+#attribution {
+    margin-left: 1.2%;
+    width:30%;
+    margin-bottom: 2%;
 }
 
 .colors {
@@ -95,10 +102,16 @@ h3 {
   font-weight: bold;
 }
 
-input#slider.row, #attribution{
+input#slider.row{
     margin-left: 1.2%;
     width:75%;
     margin-bottom: 2%;
+}
+
+#instructions{
+    margin-left: 1.2%;
+    font-family:'Pt Serif';
+    color:#f3f3f3;
 }
 
 input#slider.row:hover{
@@ -152,7 +165,7 @@ display: none !important;
 
 .mapboxgl-popup {
     max-width: 400px;
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font: 12px/20px 'PT Sans', Arial, Helvetica, sans-serif;
 }
 
 .mapboxgl-popup-content {
