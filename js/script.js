@@ -5,7 +5,7 @@ var map = new mapboxgl.Map({
     center: [8, 20],
     zoom: 1.8,
     maxBounds: bounds,
-    maxZoom: 7
+    maxZoom: 4
 });
 
 // Add zoom and rotation controls to the map.
