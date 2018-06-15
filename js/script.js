@@ -3,7 +3,9 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://openmaptiles.github.io/positron-gl-style/style-cdn.json',
     center: [8, 20],
-    zoom: 1.8
+    zoom: 1.8,
+    maxBounds: bounds,
+    maxZoom: 7
 });
 
 // Add zoom and rotation controls to the map.
@@ -116,7 +118,7 @@ map.on('load', function() {
 
         popup.setLngLat(e.lngLat)
             .setHTML('<h3 style = "color: #7bb888;">' + name 
-            + '</h3><p><span class="label-title">Planted forest (1000 ha): </span>' + forest)
+            + '</h3><p><span class="label-title">Planted forest: </span>' + forest + ' thousand hectares</p>')
             .addTo(map);
 
     });
