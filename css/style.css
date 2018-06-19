@@ -34,7 +34,7 @@ h1 {
     position: absolute;
     z-index: 1;
     line-height: 26px;
-    padding:1.2%;
+    padding:10px;
     color:#f3f3f3;
     background-color: rgba(51, 51, 51, 0.6);
 }
@@ -63,16 +63,19 @@ h1 {
 }
 
 #sliderbar.session{
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 2%;
-    width:66%;
+    width:70%;
+    margin-left: 5%;
+    margin-right: -10%;
+    margin-bottom: 4%;
+    display: inline-table;
 }
 
 #attribution {
-    margin-left: 1.2%;
     width:30%;
-    margin-bottom: 2%;
+    font-size:10px;
+    padding-top:3%;
+    text-align: right;
+    display: inline-table;
 }
 
 .colors {
@@ -117,11 +120,6 @@ input#slider.row{
 input#slider.row:hover{
     cursor: -webkit-grab; 
     cursor: grab;
-}
-
-#attribution{
-    font-size:10px;
-    padding-top:5%;
 }
 
 .row {

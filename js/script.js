@@ -1,19 +1,17 @@
+var bounds = [
+    [ -170, -65],[185, 85]
+]
 
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://openmaptiles.github.io/positron-gl-style/style-cdn.json',
-    center: [8, 20],
-    zoom: 1.8,
+    center: [0, 10],
     maxBounds: bounds,
     maxZoom: 4
 });
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
-
-var bounds = [
-    [ -100, -70],[120, 85]
-]
 
 var getYear = {
     2011: "1990",
