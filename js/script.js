@@ -112,11 +112,13 @@ map.on('load', function() {
         map.getCanvas().style.cursor = 'pointer';
 
         var name = e.features[0].properties.ADMIN;
-        var forest = e.features[0].properties[year]
+        var forest = ((e.features[0].properties[year])*1000);
+
+        var forestLabel = forest.toLocaleString('en');
 
         popup.setLngLat(e.lngLat)
             .setHTML('<h3 style = "color: #7bb888;">' + name 
-            + '</h3><p><span class="label-title">Planted forest: </span>' + forest + ' thousand hectares</p>')
+            + '</h3><p><span class="label-title">Planted forest: </span>' + forestLabel + ' hectares</p>')
             .addTo(map);
 
     });
