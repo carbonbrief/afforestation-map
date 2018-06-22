@@ -50,12 +50,21 @@ h1 {
     margin-top: 100px;
 }
 
+#right-side-console{
+    display: inline-table;
+    width: 34%;
+}
+
+#attribution {
+    font-size:10px;
+    padding-top:3%;
+    text-align: left;
+}
+
 #carbon-brief-logo{
-    width: 120px;
-    position: absolute;
-    top: 530px;
+    width: 180px;
     z-index: 1;
-    right: 0px;
+    float:right;
 }
 
 #cb-logo{
@@ -70,14 +79,6 @@ h1 {
     display: inline-table;
 }
 
-#attribution {
-    width:30%;
-    font-size:10px;
-    padding-top:3%;
-    text-align: right;
-    display: inline-table;
-}
-
 .colors {
  background: linear-gradient(to right, #ffffcc, #78c679, #006837 );
  margin-bottom: 5px;
@@ -87,9 +88,10 @@ h1 {
 h2 {
     font-size: 19px;
     line-height: 20px;
-    margin-bottom: 10px;
+    margin-bottom:0;
     color: #f3f3f3;
     padding:1.2%;
+    padding-bottom: 0;
 }
 
 h3 {
@@ -108,13 +110,16 @@ h3 {
 input#slider.row{
     margin-left: 1.2%;
     width:75%;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 #instructions{
     margin-left: 1.2%;
     font-family:'Pt Serif';
+    font-style: italic;
     color:#f3f3f3;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 input#slider.row:hover{
@@ -132,6 +137,7 @@ input#slider.row:hover{
     float: left;
     width: 33.33%;
     color:#f3f3f3;
+    font-size:11px;
 }
 
 .columns {
@@ -179,16 +185,23 @@ display: none !important;
 }
 
 @media screen and (max-width:640px){
+    #right-side-console{
+        width:29%;
+    }
+
     #carbon-brief-logo{
         display: none;
     }
+    #sliderbar.session{
+        width:60%;
+        margin-right: 5%;
+    }
     #cb-logo{
-    width: 35px;
     position: absolute;
     display: inherit;
-    top: 532px;
     z-index: 1;
     right: 5px;
+    width: 60px;
     }
     #attribution{
         padding-top:12%;
@@ -214,9 +227,16 @@ display: none !important;
         height: 400px;
     }
     #cb-logo {
-        top: 335px;
-        width: 30px;
+        width: 40px;
         right: 8px;
+    }
+    #sliderbar.session{
+        width:50%;
+        margin-right: 12%;
+
+    }
+    .column{
+        font-size:8px;
     }
 }
 
