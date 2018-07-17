@@ -1,7 +1,7 @@
 var screenWidth = $(window).width();
 
 var boundsMobile = [
-    [ -200, -20],[280, 25]
+    [ -250, 10],[280, 55]
 ]
 
 var boundsLaptop = [
@@ -9,7 +9,7 @@ var boundsLaptop = [
 ]
 
 var boundsDesktop = [
-    [ -80, -75],[90, 86]
+    [ -80, -120],[20, 86]
 ]
 
 function getBounds () {
@@ -33,9 +33,10 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://openmaptiles.github.io/positron-gl-style/style-cdn.json',
     center: [0, 10],
-    //maxBounds: bounds,
+    minZoom: 0.6,
     maxZoom: 4
 });
+
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
