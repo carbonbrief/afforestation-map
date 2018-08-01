@@ -1,14 +1,42 @@
-var bounds = [
+var screenWidth = $(window).width();
+
+var boundsMobile = [
+    [ -250, 10],[280, 55]
+]
+
+var boundsLaptop = [
     [ -170, -65],[185, 85]
 ]
+
+var boundsDesktop = [
+    [ -80, -120],[20, 86]
+]
+
+function getBounds () {
+    // 850 pixels is the screen width below which the charts get hidden
+    if (1024 > screenWidth && screenWidth > 850) {
+        return boundsLaptop
+    } 
+
+    else if (screenWidth > 1024){
+        return boundsDesktop
+    }
+
+    else {
+        return boundsMobile
+    }
+}
+
+var bounds = getBounds();
 
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://openmaptiles.github.io/positron-gl-style/style-cdn.json',
     center: [0, 10],
-    maxBounds: bounds,
+    minZoom: 0.6,
     maxZoom: 4
 });
+
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
