@@ -1,4 +1,4 @@
-var screenWidth = $(window).width();
+/*var screenWidth = $(window).width();
 
 var boundsMobile = [
     [ -250, 10],[280, 55]
@@ -10,7 +10,8 @@ var boundsLaptop = [
 
 var boundsDesktop = [
     [ -80, -120],[20, 86]
-]
+]*/
+
 
 function getBounds () {
     // 850 pixels is the screen width below which the charts get hidden
@@ -27,7 +28,7 @@ function getBounds () {
     }
 }
 
-var bounds = getBounds();
+/*var bounds = getBounds();*/
 
 var map = new mapboxgl.Map({
     container: 'map',
@@ -50,7 +51,7 @@ var getYear = {
 }
 
 // resize map for the screen
-map.fitBounds(bounds, {padding: 5});
+/*map.fitBounds(bounds, {padding: 5});*/
 
 var year = 2015;
 
