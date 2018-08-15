@@ -1,3 +1,12 @@
+mapboxgl.accessToken = 'pk.eyJ1Ijoicm9zcGVhcmNlIiwiYSI6ImNpdm1sczJsZjAwOGMyeW1xNHc4ejJ0N28ifQ.4B24e0_HgfJj4sgqimETqA';
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/rospearce/cjktwfmm10y0q2sov4959gqnp',
+center: [0, 10],
+minZoom: 0.6,
+maxZoom: 4
+});
+
 /*var screenWidth = $(window).width();
 
 var boundsMobile = [
@@ -30,13 +39,13 @@ function getBounds () {
 
 /*var bounds = getBounds();*/
 
-var map = new mapboxgl.Map({
+/*var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://openmaptiles.github.io/positron-gl-style/style-cdn.json',
     center: [0, 10],
     minZoom: 0.6,
     maxZoom: 4
-});
+});*/
 
 
 // Add zoom and rotation controls to the map.
