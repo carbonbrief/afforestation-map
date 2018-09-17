@@ -1,11 +1,33 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoicm9zcGVhcmNlIiwiYSI6ImNpdm1sczJsZjAwOGMyeW1xNHc4ejJ0N28ifQ.4B24e0_HgfJj4sgqimETqA';
-const map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/rospearce/cjktwfmm10y0q2sov4959gqnp',
-center: [0, 10],
-minZoom: 0.6,
-maxZoom: 4
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: {
+        "version": 8,
+        "sources": {
+            "simple-tiles": {
+                "type": "raster",
+                // point to our third-party tiles. Note that some examples
+                // show a "url" property. This only applies to tilesets with
+                // corresponding TileJSON (such as mapbox tiles). 
+                "tiles": [
+                   "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+                ],
+                "tileSize": 256,
+                attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
+            }
+        },
+        "layers": [{
+            "id": "simple-tiles",
+            "type": "raster",
+            "source": "simple-tiles",
+            "minzoom": 0,
+            "maxzoom": 22
+        }]
+    },
+    center: [0, 10], // starting position
+    zoom: 0.6, // starting zoom
+    maxZoom: 4
 });
+
 
 /*var screenWidth = $(window).width();
 
